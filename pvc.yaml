@@ -1,0 +1,11 @@
+Kubernetes apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: mypvc
+spec:
+  resources:
+    requests:
+      storage: <Size>
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteOnce
