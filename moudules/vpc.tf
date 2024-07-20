@@ -38,11 +38,11 @@ resource "aws_internet_gateway" "gw" {
   }
 }
 
-# internet gateway attachment with vpc 
-resource "aws_internet_gateway_attachment" "igw_vpc_attach" {
-  internet_gateway_id = aws_internet_gateway.gw.id
-  vpc_id              = aws_vpc.devproject.id 
-}
+# # internet gateway attachment with vpc 
+# resource "aws_internet_gateway_attachment" "igw_vpc_attach" {
+#   internet_gateway_id = aws_internet_gateway.gw.id
+#   vpc_id              = aws_vpc.devproject.id 
+# }
 
 # create a public route table and assosiate subnet with that 
 resource "aws_route_table" "public_rt" {
